@@ -62,6 +62,10 @@ utils.loadNetImg(node, 'xxx', '.jpg');
 ```
 3. 微信子域代码（sub目录）使用这里我就不说了，代码注释有
 
+4. 自定义的 cocos creator 使用个人觉得非常好用，建议常用的组件都自行定义使用 Script/ui/目录下我定义了两个常用的
+
+5. 小游戏的数据存储是优先存储在本地的，其次到服务端。然后在加载页的时候获取本地数据，如果本地数据没有，再从服务端拿取。这样用户换设备使用同一个小程序的时候就可以保证数据不丢失了。
+
 ### 有需要的老哥可以支持一下
 ![my-code.png](https://github.com/Hansen-hjs/Hansen-hjs.github.io/blob/master/images/wxcode.jpg "my-code")
 
