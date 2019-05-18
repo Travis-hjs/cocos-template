@@ -1,6 +1,20 @@
 # cocos creator H5 游戏模板
 
 > 仅供小游戏开发逻辑使用（JS & TS），并不适用于 C++ & C# 等编程式思维使用
+>> 大概说一下我的跨文件编程思维：通过全局对象 Global 去定义实例化的对象，然后其他脚本调用某个文件的方法时候就 Global.XXX.fun();这样。因为小游戏不同于大型游戏，所以我这里就不做事件派发和脚本联动的处理机制了。
+```
+// 常用到的脚本对象 Main.js
+onload() {
+    Global.Game = this;
+}
+
+// 假设我在游戏主函数 Main.js 定义了一个对象池 
+this.bulletPool = new cc.NodePool();
+
+// 然后在 Bullet.js 中进行回收当前节点到对象池中，那么就可以这样写
+Global.Game.bulletPool.put(this.node);
+
+```
 
 ### 结构目录
 * client 游戏主程序
