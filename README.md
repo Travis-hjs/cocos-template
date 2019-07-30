@@ -2,7 +2,7 @@
 
 > 仅供小游戏开发逻辑使用（JS & TS），并不适用于 C++ & C# 等编程式思维使用
 >> 大概说一下我的跨文件编程思维：通过全局对象 Global 去定义实例化的对象，然后其他脚本调用某个文件的方法时候就 Global.XXX.fun();这样。因为小游戏不同于大型游戏，所以我这里就不做事件派发和脚本联动的处理机制了。
-```
+```js
 // 常用到的脚本对象 Main.js
 onload() {
     Global.Game = this;
@@ -28,7 +28,7 @@ Global.Game.bulletPool.put(this.node);
 使用：
 
 1. 游戏加载页初始化微信工具（不在微信端可以忽略），我的游戏逻辑是先进游戏加载场景，然后再进游戏主逻辑场景，一共两个场景。这样的好处就是1、微信小程序打开速度会很快2、在加载场景中只做初始化的一些操作，游戏场景只做游戏相关的内容，两者更加清晰。
-```
+```js
 // 示例中我是通过与后台接口设置游戏中的参数，具体看代码注释即可
 // 在 onload 或者 start 方法中 始化微信控件 
 WeChat.initShare();
@@ -55,7 +55,7 @@ WeChat.hideBanner();
 ```
 
 2. 在游戏主场景中初始化预制体加载框
-```
+```js
 // this.loadingBox => 加载框预制体，具体节点布局在编辑器可以查看
 utils.setLoadingBox(cc.instantiate(this.loadingBox), this.node);
 
