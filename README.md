@@ -1,6 +1,6 @@
 # cocos creator H5 游戏模板
 
-> 针对小游戏开发逻辑使用（`JavaScript`&`TypeScript`），因为小游戏不同于大型游戏，逻辑不是很复杂，所以我这里就不做事件派发和脚本联动的处理机制了，而是通过一个全局模块去管理各个模块和调用（更好的代码提示和追踪）。
+> 针对小游戏开发逻辑使用，因为小游戏不同于大型游戏，逻辑不是很复杂，所以我这里就不做事件派发和脚本联动的处理机制了，而是通过一个全局模块去管理各个模块和调用（更好的代码提示和追踪）。
 
 > 大概说一下我的跨文件编程思维：通过全局对象`Global`去定义实例化的对象，然后其他脚本调用某个文件的方法时候就 `Global.ModuleXXX.fun()`
 
@@ -82,8 +82,6 @@ utils.loadNetImg(node, 'xxx', '.jpg');
 ### 结构目录
 * client 游戏主程序
 * sub 游戏子域
-1. master`typescript`版本
-2. 分支`javascript`版本是老板版本js写的，不再维护了
 
 ### 有需要的老哥可以支持一下（微信：Hjs951222）
 ![my-code.png](https://github.com/Hansen-hjs/Hansen-hjs.github.io/blob/master/images/wxcode.jpg "my-code")
